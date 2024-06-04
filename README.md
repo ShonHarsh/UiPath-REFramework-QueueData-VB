@@ -1,8 +1,16 @@
-### Documentation is included in the Documentation folder ###
+![UiPath](https://shonharsh.github.io/curriculum-vitae/images/banner-uipath.png)
 
+# UiPath-REFramework-QueueData-VB
 
-### REFrameWork Template ###
-**Robotic Enterprise Framework**
+This is a VB implementation of a Robotic Enterprise Framework (REFramework) project that reads from a queue. The REFramework is a transactional business process that follows best practices for large scale deployments.
+
+### Getting Started
+
+After making a pull request or downloading the project, open the Main.xaml in UiPath Studio.  The robot can be run with the play button in the ribbon and the result can be seen in output panel.
+
+### Details
+
+Official documentation is included in the Documentation folder
 
 * Built on top of *Transactional Business Process* template
 * Uses *State Machine* layout for the phases of automation project
@@ -24,7 +32,7 @@
  + ./Framework/*GetTransactionData* - Fetches transactions from an Orchestrator queue defined by Config("OrchestratorQueueName") or any other configured data source
 
 3. **PROCESS TRANSACTION**
- + *Process* - Process trasaction and invoke other workflows related to the process being automated 
+ + *Process* - Process trasaction and invoke other workflows related to the process being automated
  + ./Framework/*SetTransactionStatus* - Updates the status of the processed transaction (Orchestrator transactions by default): Success, Business Rule Exception or System Exception
 
 4. **END PROCESS**
@@ -37,3 +45,27 @@
 2. Implement InitiAllApplications.xaml and CloseAllApplicatoins.xaml workflows, linking them in the Config.xlsx fields
 3. Implement GetTransactionData.xaml and SetTransactionStatus.xaml according to the transaction type being used (Orchestrator queues by default)
 4. Implement Process.xaml workflow and invoke other workflows related to the process being automated
+
+### Architecture Requirements
+
+A standard UiPath, Studio to Orchestrator cloud setup is the base of operation.  It is easy to setup and free.
+1. An Orchestrator connection - Visit https://cloud.uipath.com/ and authenticate or sign up.
+2. [UiPath Studio](https://www.uipath.com/product/studio) is used to run the robot.  Note that Studio Web can be used directly in Orchestrator but I recommend installing the Studio IDE application.
+
+[![UiPath Setup Guide](https://shonharsh.github.io/curriculum-vitae/images/Title-UiPath-Setup-Guide.png)](https://github.com/ShonHarsh/UiPath-SetupGuide)
+
+### Git Notes
+
+Clone the project to develop or change it.
+
+```sh
+git clone https://github.com/ShonHarsh/UiPath-REFramework-QueueData-VB
+```
+
+### Links
+- [UiPath Automation Platform](https://www.uipath.com/)
+- [UiPath Studio](https://www.uipath.com/product/studio)
+- [Pulsar](https://pulsar-edit.dev/) (Atom Successor) - Used for all my README.md files
+- [Shon Harsh Website 127.0.0.1](https://shonharsh.github.io/curriculum-vitae/index.html)
+- [This.GitHub](https://github.com/shonharsh)
+- [LinkedIn](https://www.linkedin.com/in/shonharsh/)
